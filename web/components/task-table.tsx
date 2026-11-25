@@ -48,13 +48,13 @@ export function TaskTable({ tasks, onEdit, onDelete }: TaskTableProps) {
             <TableRow key={task.id}>
               <TableCell className="font-medium">{task.title}</TableCell>
               <TableCell className="max-w-md truncate text-muted-foreground">
-                {task.description || '—'}
+                {task.description || '-'}
               </TableCell>
               <TableCell>
                 <StatusBadge status={task.status} />
               </TableCell>
               <TableCell className="text-muted-foreground">
-                {task.dueDate ? task.dueDate.slice(0, 10) : '—'}
+                {task.dueDate ? task.dueDate.slice(0, 10) : '-'}
               </TableCell>
               <TableCell className="text-muted-foreground text-sm">
                 {new Date(task.createdAt).toLocaleString()}
